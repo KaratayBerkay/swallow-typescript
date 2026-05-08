@@ -5,11 +5,11 @@
 >
 > Philosophy:
 >
-> * Learn gradually
-> * Build constantly
-> * Break code intentionally
-> * Fix errors yourself
-> * Focus on practical understanding
+> - Learn gradually
+> - Build constantly
+> - Break code intentionally
+> - Fix errors yourself
+> - Focus on practical understanding
 >
 > Completion Rule:
 >
@@ -37,27 +37,31 @@ npm -v
 
 Checklist:
 
-* [ ] Node.js installed
-* [ ] npm working
+- [ ] Node.js installed
+- [ ] npm working
 
 ---
 
 ## Install TypeScript
 
 ```bash
-npm install -g typescript
+pnpm add -D typescript
+```
+
+```bash
+pnpm add -D @types/node
 ```
 
 Check:
 
 ```bash
-tsc -v
+pnpm exec tsc --init
 ```
 
 Checklist:
 
-* [ ] TypeScript installed
-* [ ] tsc command works
+- [ ] TypeScript installed
+- [ ] tsc command works
 
 ---
 
@@ -88,8 +92,8 @@ tsc --init
 
 Checklist:
 
-* [ ] package.json created
-* [ ] tsconfig.json created
+- [ ] package.json created
+- [ ] tsconfig.json created
 
 ---
 
@@ -123,9 +127,9 @@ node index.js
 
 Checklist:
 
-* [ ] First TS file created
-* [ ] TS compiled successfully
-* [ ] JS executed successfully
+- [ ] First TS file created
+- [ ] TS compiled successfully
+- [ ] JS executed successfully
 
 ---
 
@@ -173,17 +177,17 @@ let board: {
   cores: number;
 } = {
   name: "STM32",
-  cores: 2
+  cores: 2,
 };
 ```
 
 Checklist:
 
-* [ ] string
-* [ ] number
-* [ ] boolean
-* [ ] arrays
-* [ ] objects
+- [ ] string
+- [ ] number
+- [ ] boolean
+- [ ] arrays
+- [ ] objects
 
 ---
 
@@ -231,11 +235,11 @@ function power(value: number, exp: number = 2) {
 
 Checklist:
 
-* [ ] typed functions
-* [ ] return types
-* [ ] void
-* [ ] optional parameters
-* [ ] default parameters
+- [ ] typed functions
+- [ ] return types
+- [ ] void
+- [ ] optional parameters
+- [ ] default parameters
 
 ---
 
@@ -248,12 +252,12 @@ let temp = 35;
 TypeScript infers:
 
 ```ts
-number
+number;
 ```
 
 Checklist:
 
-* [ ] understand inference
+- [ ] understand inference
 
 ---
 
@@ -301,11 +305,11 @@ let rgb: [number, number, number] = [255, 0, 0];
 
 Checklist:
 
-* [ ] any
-* [ ] unknown
-* [ ] unions
-* [ ] literal types
-* [ ] tuples
+- [ ] any
+- [ ] unknown
+- [ ] unions
+- [ ] literal types
+- [ ] tuples
 
 ---
 
@@ -356,11 +360,11 @@ interface Config {
 
 Checklist:
 
-* [ ] type aliases
-* [ ] interfaces
-* [ ] optional properties
-* [ ] readonly
-* [ ] difference between type/interface
+- [ ] type aliases
+- [ ] interfaces
+- [ ] optional properties
+- [ ] readonly
+- [ ] difference between type/interface
 
 ---
 
@@ -370,15 +374,15 @@ Checklist:
 enum Status {
   Idle,
   Running,
-  Error
+  Error,
 }
 ```
 
 Checklist:
 
-* [ ] enums
-* [ ] enum states
-* [ ] enum usage
+- [ ] enums
+- [ ] enum states
+- [ ] enum usage
 
 ---
 
@@ -394,9 +398,9 @@ function print(value: string | number) {
 
 Checklist:
 
-* [ ] typeof narrowing
-* [ ] instanceof
-* [ ] type guards
+- [ ] typeof narrowing
+- [ ] instanceof
+- [ ] type guards
 
 ---
 
@@ -425,9 +429,9 @@ interface ApiResponse<T> {
 
 Checklist:
 
-* [ ] generics
-* [ ] generic functions
-* [ ] generic interfaces
+- [ ] generics
+- [ ] generic functions
+- [ ] generic interfaces
 
 ---
 
@@ -463,10 +467,10 @@ class Device {
 
 Checklist:
 
-* [ ] classes
-* [ ] constructors
-* [ ] methods
-* [ ] private/public/protected
+- [ ] classes
+- [ ] constructors
+- [ ] methods
+- [ ] private/public/protected
 
 ---
 
@@ -492,9 +496,9 @@ import { add } from "./math";
 
 Checklist:
 
-* [ ] exports
-* [ ] imports
-* [ ] module structure
+- [ ] exports
+- [ ] imports
+- [ ] module structure
 
 ---
 
@@ -524,9 +528,9 @@ async function main() {
 
 Checklist:
 
-* [ ] Promise
-* [ ] async
-* [ ] await
+- [ ] Promise
+- [ ] async
+- [ ] await
 
 ---
 
@@ -542,9 +546,9 @@ try {
 
 Checklist:
 
-* [ ] try/catch
-* [ ] Error objects
-* [ ] custom errors
+- [ ] try/catch
+- [ ] Error objects
+- [ ] custom errors
 
 ---
 
@@ -571,19 +575,19 @@ type UserType = typeof user;
 # Utility Types
 
 ```ts
-Partial<T>
-Required<T>
-Readonly<T>
-Pick<T>
-Omit<T>
-Record<K,T>
+Partial<T>;
+Required<T>;
+Readonly<T>;
+Pick<T>;
+Omit<T>;
+Record<K, T>;
 ```
 
 Checklist:
 
-* [ ] keyof
-* [ ] typeof
-* [ ] utility types
+- [ ] keyof
+- [ ] typeof
+- [ ] utility types
 
 ---
 
@@ -595,8 +599,8 @@ type IsString<T> = T extends string ? true : false;
 
 Checklist:
 
-* [ ] conditional types
-* [ ] extends keyword
+- [ ] conditional types
+- [ ] extends keyword
 
 ---
 
@@ -610,7 +614,7 @@ type Flags<T> = {
 
 Checklist:
 
-* [ ] mapped types
+- [ ] mapped types
 
 ---
 
@@ -625,8 +629,8 @@ type State =
 
 Checklist:
 
-* [ ] discriminated unions
-* [ ] state patterns
+- [ ] discriminated unions
+- [ ] state patterns
 
 ---
 
@@ -639,8 +643,8 @@ class UserController {}
 
 Checklist:
 
-* [ ] decorators
-* [ ] metadata basics
+- [ ] decorators
+- [ ] metadata basics
 
 ---
 
@@ -652,8 +656,8 @@ index.d.ts
 
 Checklist:
 
-* [ ] declaration files
-* [ ] external typings
+- [ ] declaration files
+- [ ] external typings
 
 ---
 
@@ -669,9 +673,9 @@ tsconfig:
 
 Checklist:
 
-* [ ] strict mode
-* [ ] noImplicitAny
-* [ ] strictNullChecks
+- [ ] strict mode
+- [ ] noImplicitAny
+- [ ] strictNullChecks
 
 ---
 
@@ -679,18 +683,18 @@ Checklist:
 
 Learn:
 
-* file system
-* path
-* CLI tools
-* APIs
-* Express
+- file system
+- path
+- CLI tools
+- APIs
+- Express
 
 Checklist:
 
-* [ ] fs
-* [ ] path
-* [ ] Express
-* [ ] REST APIs
+- [ ] fs
+- [ ] path
+- [ ] Express
+- [ ] REST APIs
 
 ---
 
@@ -698,17 +702,17 @@ Checklist:
 
 Learn:
 
-* React
-* props typing
-* hooks typing
-* refs
-* context
+- React
+- props typing
+- hooks typing
+- refs
+- context
 
 Checklist:
 
-* [ ] React TS
-* [ ] props typing
-* [ ] hooks typing
+- [ ] React TS
+- [ ] props typing
+- [ ] hooks typing
 
 ---
 
@@ -716,16 +720,16 @@ Checklist:
 
 Learn:
 
-* Jest
-* Vitest
-* unit testing
-* mocks
+- Jest
+- Vitest
+- unit testing
+- mocks
 
 Checklist:
 
-* [ ] unit tests
-* [ ] mocks
-* [ ] assertions
+- [ ] unit tests
+- [ ] mocks
+- [ ] assertions
 
 ---
 
@@ -733,17 +737,17 @@ Checklist:
 
 Learn:
 
-* ESLint
-* Prettier
-* Vite
-* tsup
-* esbuild
+- ESLint
+- Prettier
+- Vite
+- tsup
+- esbuild
 
 Checklist:
 
-* [ ] ESLint
-* [ ] Prettier
-* [ ] Vite
+- [ ] ESLint
+- [ ] Prettier
+- [ ] Vite
 
 ---
 
@@ -754,31 +758,31 @@ Checklist:
 # Binary Data
 
 ```ts
-Uint8Array
-ArrayBuffer
-DataView
+Uint8Array;
+ArrayBuffer;
+DataView;
 ```
 
 ---
 
 # Serial Communication
 
-* serialport library
+- serialport library
 
 ---
 
 # Protocol Parsing
 
-* UART
-* CAN
-* MODBUS
+- UART
+- CAN
+- MODBUS
 
 Checklist:
 
-* [ ] Uint8Array
-* [ ] ArrayBuffer
-* [ ] serial communication
-* [ ] binary parsing
+- [ ] Uint8Array
+- [ ] ArrayBuffer
+- [ ] serial communication
+- [ ] binary parsing
 
 ---
 
@@ -786,28 +790,28 @@ Checklist:
 
 ## Beginner
 
-* [ ] calculator
-* [ ] todo app
-* [ ] stopwatch
-* [ ] converter
+- [ ] calculator
+- [ ] todo app
+- [ ] stopwatch
+- [ ] converter
 
 ---
 
 ## Intermediate
 
-* [ ] REST API app
-* [ ] websocket dashboard
-* [ ] CLI app
+- [ ] REST API app
+- [ ] websocket dashboard
+- [ ] CLI app
 
 ---
 
 ## Embedded Projects
 
-* [ ] UART parser
-* [ ] CAN decoder
-* [ ] telemetry dashboard
-* [ ] firmware config validator
-* [ ] sensor monitor
+- [ ] UART parser
+- [ ] CAN decoder
+- [ ] telemetry dashboard
+- [ ] firmware config validator
+- [ ] sensor monitor
 
 ---
 
@@ -864,15 +868,15 @@ https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
 Eventually you should be able to:
 
-* build APIs
-* build tooling
-* build dashboards
-* create typed libraries
-* parse binary protocols
-* use React + TS
-* use Node + TS
-* understand advanced typing
-* structure large applications
+- build APIs
+- build tooling
+- build dashboards
+- create typed libraries
+- parse binary protocols
+- use React + TS
+- use Node + TS
+- understand advanced typing
+- structure large applications
 
 ---
 
